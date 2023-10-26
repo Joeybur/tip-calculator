@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --secundary-bg: hsl(183, 100%, 15%);
+  --secundary-text: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Main-bg: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --App-bg: hsl(0, 0%, 100%);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  justify-content: center;
+  background: var(--Main-bg);
+  padding-top: 3rem;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+}
+
+.tip-calculator-container {
+  background: var(--App-bg);
+  border-radius: 15px 15px 0 0;
+  padding: 2rem;
+}
+
+.bill-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.bill-input input {
+  background: url(images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 10px;
+  padding: 0.5rem;
+  border: none;
+  text-align: right;
+  color: var(--secundary-bg);
+  font-size: 1.25rem;
+}
+
+.tip-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.tip-btn {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  background: var(--secundary-bg);
+  color: var(--App-bg);
+  font-size: 1.2rem;
+}
